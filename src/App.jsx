@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import { Shield, BookOpen, Microscope, ArrowRight, Leaf, Sparkles, Phone, User, CheckCircle2, GraduationCap, Users, Dna, MapPin } from 'lucide-react';
-
+import { Shield, BookOpen, Microscope, ArrowRight, Leaf, Sparkles, Phone, User, CheckCircle2, GraduationCap, Users, Dna, MapPin, BookOpenText } from 'lucide-react';
+import { FiInstagram } from "react-icons/fi";
+import { RiTelegram2Fill } from "react-icons/ri";
 function App() {
   const [formData, setFormData] = useState({ name: '', phone: '' });
   const [status, setStatus] = useState({ type: '', message: '' });
@@ -112,10 +113,12 @@ function App() {
           </h1>
           
           <p className="text-lg text-slate-600 max-w-xl leading-relaxed">
-            Tibbiyot oliygohlariga va DTM imtihonlariga sifatli tayyorgarlik. Tajribali ustozlar, zamonaviy o'quv xonalari va mukammal darsliklar yordamida talaba bo'lish orzuingizga erishing.
+            Tibbiyot oliygohlariga , Milliy sertifikat , BMBA imtihonlariga sifatli tayyorgarlik. Tajribali ustozlar, zamonaviy o'quv xonalari va mukammal darsliklar yordamida talaba bo'lish orzuingizga erishing.
           </p>
-          
           <div className="flex flex-wrap gap-4 pt-2">
+              <a href="https://t.me/promedic_lc" className="inline-flex items-center gap-2 bg-green-600 hover:bg-green-700 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all shadow-lg hover:shadow-green-600/30 group">
+              Natijalarni ko'rish <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+            </a>
             <a href="#register" className="inline-flex items-center gap-2 bg-green-600 hover:bg-green-700 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all shadow-lg hover:shadow-green-600/30 group">
               Kursga yozilish <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </a>
@@ -128,7 +131,7 @@ function App() {
              </div>
              <div className="w-px h-12 bg-slate-200"></div>
              <div className="flex flex-col">
-               <span className="text-3xl font-black text-green-600">5+</span>
+               <span className="text-3xl font-black text-green-600">6+</span>
                <span className="text-sm font-medium text-slate-500 mt-1">Yillik tajriba</span>
              </div>
           </div>
@@ -164,8 +167,9 @@ function App() {
             <p className="text-slate-500 max-w-2xl mx-auto text-lg">Biz sizga nafaqat bilim, balki oliygohga kirish uchun to'g'ri yo'nalish ham beramiz.</p>
           </div>
           
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-4 gap-4">
             {[
+              { icon: <BookOpenText className="w-7 h-7" />, title: "Milliy Sertifikat", desc: "Biologiya fanidan Milliy Sertifikat Imtihonlariga tayyorlov.", delay: "delay-400" },
               { icon: <BookOpen className="w-7 h-7" />, title: "Mukammal Darsliklar", desc: "Mavzularni oson tushunish uchun maxsus ishlab chiqilgan o'quv qo'llanmalar.", delay: "delay-200" },
               { icon: <Users className="w-7 h-7" />, title: "Tajribali Ustozlar", desc: "Ko'p yillik tajribaga ega malakali o'qituvchilar jamoasi.", delay: "delay-300" },
               { icon: <CheckCircle2 className="w-7 h-7" />, title: "DTM Testlar", desc: "Haqiqiy imtihon formatiga tushuvchi testlar bazasi bilan ishlash mashg'ulotlari.", delay: "delay-400" },
@@ -275,20 +279,37 @@ function App() {
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-10">
           <div className="space-y-4 animate-fade-in-up">
             <h3 className="text-2xl font-bold text-slate-800 tracking-tight">Biz bilan bog'lanish</h3>
-            <p className="text-slate-500 max-w-md">Markazimizga tashrif buyuring yoki telefon orqali bepul maslahat oling.</p>
+            <p className="text-slate-500 max-w-[300px]">Markazimizga tashrif buyuring yoki telefon orqali bepul maslahat oling.</p>
           </div>
           
-          <div className="flex flex-col sm:flex-row gap-6">
-            <div className="flex items-center gap-4 bg-white p-5 rounded-2xl shadow-sm border border-slate-100 animate-fade-in-left delay-100">
+          <div className="flex flex-col sm:flex-row gap-3">
+            <a href="tel:+998936775254" className="flex items-center gap-4 bg-white p-5 rounded-2xl shadow-sm border border-slate-100 animate-fade-in-left delay-100">
               <div className="w-12 h-12 rounded-full bg-green-100 flex items-center justify-center text-green-600 shrink-0">
                 <Phone className="w-6 h-6" />
               </div>
               <div>
                 <div className="text-xs text-slate-400 font-bold uppercase tracking-wider mb-1">Telefon raqam</div>
-                <div className="font-bold text-slate-800 text-lg">+998 93 677 52 54</div>
+                <div className="font-bold text-slate-800 text-[16px]">+998 93 677 52 54</div>
               </div>
-            </div>
-            
+            </a>
+             <a href="https://www.instagram.com/promedic.lc/" className="flex items-center gap-4 bg-white p-5 rounded-2xl shadow-sm border border-slate-100 animate-fade-in-left delay-100">
+              <div className="w-12 h-12 rounded-full bg-green-100 flex items-center justify-center text-green-600 shrink-0">
+                <FiInstagram className="w-6 h-6" />
+              </div>
+              <div>
+                <div className="text-xs text-slate-400 font-bold uppercase tracking-wider mb-1">Instagram Sahifamiz</div>
+                <div className="font-bold text-slate-800 text-[16px]">@promedic.lc</div>
+              </div>
+            </a>
+             <a href="https://t.me/promedic_lc" className="flex items-center gap-4 bg-white p-5 rounded-2xl shadow-sm border border-slate-100 animate-fade-in-left delay-100">
+              <div className="w-12 h-12 rounded-full bg-green-100 flex items-center justify-center text-green-600 shrink-0">
+                <RiTelegram2Fill className="w-6 h-6"  />
+              </div>
+              <div>
+                <div className="text-xs text-slate-400 font-bold uppercase tracking-wider mb-1">Telegram Sahifamiz</div>
+                <div className="font-bold text-slate-800 text-[16px]">@promedic_lc</div>
+              </div>
+            </a>
             {/* <div className="flex items-center gap-4 bg-white p-5 rounded-2xl shadow-sm border border-slate-100 animate-fade-in-left delay-200">
               <div className="w-12 h-12 rounded-full bg-green-100 flex items-center justify-center text-green-600 shrink-0">
                 <MapPin className="w-6 h-6" />
